@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taomni o'chirish</title>
+</head>
+<body>
+    <h1>"{{ food.name }}" taomini o'chirasizmi?</h1>
+    <p>{{ food.description }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Ha, o'chiraman</button>
+        <a href="{% url 'all_foods' %}">Bekor qilish</a>
+    </form>
+</body>
+</html>
