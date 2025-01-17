@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Profil{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h4>Foydalanuvchi Profili</h4>
+        </div>
+        <div class="card-body">
+            <p><strong>Foydalanuvchi nomi:</strong> {{ user.username }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Telefon raqam:</strong> {{ user.phone_number }}</p>
+            <p><strong>Manzil:</strong> {{ user.address }}</p>
+        </div>
+        <div class="card-footer">
+            <a href="{% url 'edit_profile' %}" class="btn btn-primary">Profilni tahrirlash</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
